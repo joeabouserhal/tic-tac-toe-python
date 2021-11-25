@@ -16,6 +16,18 @@ def main():
 
 
 def select_character():
+    console.print(r"""[white]
+       ,--,  ,--,           ,-.--,  _,.---._     
+   __ /-\==\/-\==\_.--.-.  /=/, .',-.' , -  `.   
+ /\_  \'/==/ '/==/_\==\ -\/=/- / /==/_,  ,  - \  
+ \/================/\==\ `-' ,/ |==|   .=.     | 
+/\__ \/==/  /==/_\/  |==|,  - | |==|_ : ;=:  - | 
+\/===============/  /==/   ,   \|==| , '='     | 
+ / `/==/ `/==/     /==/, .--, - \\==\ -    ,_ /  
+ `--`-`  -`-`      \==\- \/=/ , / '.='. -   .'   
+                    `--`-'  `--`    `--`--''     
+[/white]""", justify="center")
+    console.print("Welcome to Tic Tac Toe!", justify="center", end="\n\n\n\n\n")
     player = console.input("Please pick [green]X[/green] or [green]O[/green]: ").upper()
     if player != 'X' and player != 'O':
         clear()

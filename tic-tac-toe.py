@@ -32,7 +32,7 @@ $$$$$$$$$$\  $$  $$<  $$ |  $$ |
     player = console.input("Please pick [green]X[/green] or [green]O[/green]: ").upper()
     if player != 'X' and player != 'O':
         clear()
-        print("Wrong input, please try again")
+        print("Wrong input, please try again!")
         select_character()
     clear()
     play(player)
@@ -50,7 +50,7 @@ def play(player: chr):
         picked_position = int(picked_position)
     except (Exception, ValueError):
         clear()
-        print("Wrong input")
+        print("Wrong input!")
         play(player)
 
     if board_pos[picked_position - 1] == empty and 1 <= picked_position <= 9:
@@ -65,11 +65,11 @@ def play(player: chr):
     else:
         if board_pos[int(picked_position) - 1] == empty:
             clear()
-            print("Place is already taken try again")
+            print("Place is already taken try again!")
             play(player)
         else:
             clear()
-            print("Wrong input try again")
+            print("Wrong input try again!")
             play(player)
 
 

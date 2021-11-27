@@ -73,7 +73,7 @@ def play(player: chr):
             play(player)
 
 
-def check_for_win(player):
+def check_for_win(player: chr):
     if board_pos[0:3] == [player] * 3:
         win(player)
     elif board_pos[3:6] == [player] * 3:

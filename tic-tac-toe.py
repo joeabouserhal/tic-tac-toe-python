@@ -1,6 +1,7 @@
 from rich import print
 from rich.console import Console
 import os
+import platform
 
 """
 Tic Tac Toe
@@ -17,7 +18,10 @@ board_pos = [empty] * 9
 
 
 def clear():
-    os.system("cls")
+    if platform.system() == 'Windows':
+        os.system("cls")
+    else:
+        os.system("reset")
 
 
 def main():

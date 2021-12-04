@@ -2,6 +2,15 @@ from rich import print
 from rich.console import Console
 import os
 
+"""
+Tic Tac Toe
+-----------
+Welcome to this basic simple tic tac toe game that i wrote in literally like 2 hours and i had
+a lot of fun with it.
+Don't expect any sort of updates to it because i couldn't bother less
+But thanks for checking it ot anyways!!!
+"""
+
 console = Console()
 empty = " "
 board_pos = [empty] * 9
@@ -38,6 +47,7 @@ $$$$$$$$$$\  $$  $$<  $$ |  $$ |
     play(player)
 
 
+# function that prompts user to pick position, then check the board
 def play(player: chr):
     board = f" {board_pos[0]} | {board_pos[1]} | {board_pos[2]}\n" \
             f"-----------\n" \
@@ -73,6 +83,7 @@ def play(player: chr):
             play(player)
 
 
+# function that checks whether the player has won
 def check_for_win(player: chr):
     if board_pos[0:3] == [player] * 3:
         win(player)
@@ -94,6 +105,7 @@ def check_for_win(player: chr):
         tie()
 
 
+# display the tie screen
 def tie():
     clear()
     print("[black on yellow]Uh oh it was a tie[black on yellow]")
@@ -109,6 +121,7 @@ def tie():
         tie()
 
 
+# display the winning screen
 def win(winner: chr):
     clear()
     print(f"[black on green]Player {winner} has won!!![/black on green]")
@@ -124,6 +137,7 @@ def win(winner: chr):
         win(winner)
 
 
+# clear the board to restart the game
 def clear_board():
     global board_pos
     board_pos = [empty] * 9

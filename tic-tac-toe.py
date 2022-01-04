@@ -12,6 +12,8 @@ Don't expect any sort of updates to it because i couldn't bother less
 But thanks for checking it ot anyways!!!
 """
 
+# git test 1
+
 console = Console()
 empty = " "
 board_pos = [empty] * 9

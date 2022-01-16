@@ -3,6 +3,7 @@ from rich.console import Console
 import os
 import platform
 
+
 """
 Tic Tac Toe
 -----------

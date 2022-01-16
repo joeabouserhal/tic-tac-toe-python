@@ -12,8 +12,6 @@ Don't expect any sort of updates to it because i couldn't bother less
 But thanks for checking it ot anyways!!!
 """
 
-# git test 1
-# git test 2
 
 console = Console()
 empty = " "
@@ -44,8 +42,10 @@ $$$$$$$$$$\  $$  $$<  $$ |  $$ |
   \__|\__|  \__|  \__| \______/
 [/white]
 """, justify="center")
-    console.print("Welcome to Tic Tac Toe!", justify="center", end="\n\n\n\n\n")
-    player = console.input("Please pick [green]X[/green] or [green]O[/green]: ").upper()
+    console.print("Welcome to Tic Tac Toe!",
+                  justify="center", end="\n\n\n\n\n")
+    player = console.input(
+        "Please pick [green]X[/green] or [green]O[/green]: ").upper()
     if player != 'X' and player != 'O':
         clear()
         print("Wrong input, please try again!")
@@ -62,7 +62,8 @@ def play(player: chr):
             f"-----------\n" \
             f" {board_pos[6]} | {board_pos[7]} | {board_pos[8]}\n"
     print(board)
-    picked_position = console.input(f"player {player} please enter the number you would like to cross out: ")
+    picked_position = console.input(
+        f"player {player} please enter the number you would like to cross out: ")
     try:
         picked_position = int(picked_position)
     except (Exception, ValueError):
